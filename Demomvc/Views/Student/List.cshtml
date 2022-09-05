@@ -1,0 +1,34 @@
+﻿<table class="table table-bordered">
+    <tr>
+        <th>Student RollNo</th>
+        <th>Student Name</th>
+        <th>Student Percentage</th>
+    </tr>
+    @foreach (Student s in (IEnumerable<Student>)ViewData["studentlist"])
+    {
+        <tr>
+            <td>@s.RollNo</td>
+            <td>@s.Name</td>
+            <td>@s.Percentage</td>
+        </tr>
+
+    }
+</table>
+
+<h4>using ViewBag</h4>
+<table class="table table-bordered">
+    <tr>
+        <th>Student RollNo</th>
+        <th>Student Name</th>
+        <th>Student Percentage</th>
+    </tr>
+    @foreach (Student s in ViewBag.Products)
+    {
+        <tr>
+            <td>@s.RollNo</td>
+            <td>@s.Name</td>
+            <td>@s.Percentage</td>
+        </tr>
+
+    }
+</table>
